@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Statics on Gempir</title>
+    <link>https://gempir.com/static/</link>
+    <description>Recent content in Statics on Gempir</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 03 Nov 2018 12:28:33 +0100</lastBuildDate>
+    
+	<atom:link href="https://gempir.com/static/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Imprint</title>
+      <link>https://gempir.com/static/imprint/</link>
+      <pubDate>Sat, 03 Nov 2018 12:28:33 +0100</pubDate>
+      
+      <guid>https://gempir.com/static/imprint/</guid>
+      <description>Owner Daniel
+gempir.dev@gmail.com
+Privacy Policy This Privacy Policy governs the manner in which gempir collects, uses, maintains and discloses information collected from users (each, a &amp;ldquo;User&amp;rdquo;) of the gempir.com website (&amp;ldquo;Site&amp;rdquo;). This privacy policy applies to the Site and all products and services offered by gempir.
+Personal identification information We may collect personal identification information from Users in a variety of ways in connection with activities, services, features or resources we make available on our Site.</description>
+    </item>
+    
+  </channel>
+</rss>
