@@ -1,0 +1,16 @@
+<!-- begin post -->
+<a class="post" href="{{ .URL }}">
+    <!-- <div class="maxthumb">
+        <a href="{{ .URL }}">
+            {{with .Params.image}}
+            <img class="img-fluid" src="{{ . | urlize | relURL }}" alt="A thumbnail image">
+            {{end}}
+        </a>
+    </div> -->
+    <h3>{{ .Title }}</h3>
+    <p class="post-summary">{{ .Summary }}</p>
+    <span class="post-date">{{ dateFormat "Jan 2, 2006" .PublishDate }}</span>
+    <span class="reading-time">{{ .ReadingTime }} min read</span>
+    <div class="clearfix"></div>
+</a>
+<!-- end post -->

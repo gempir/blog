@@ -1,0 +1,37 @@
+baseURL = "https://gempir.com"
+languageCode = "en-us"
+title = "Gempir"
+theme = "simple"
+disqusShortname = "gempir-com"
+
+[params]
+  logo = "/images/profile.png"
+  description ="Blog"
+
+[params.author]
+  name = "Daniel Pasch"
+  thumbnail = "/images/profile.png"
+  description = ""
+
+[params.index]
+  picture = "/images/profile.png"
+  title = "Daniel Pasch"
+  subtitle = "Software Developer"
+
+[params.social]
+  github = "gempir"
+  linkedin = "daniel-pasch-sannapiu-593662161"
+  xing = "Daniel_PaschSannapiu"
+  twitter = "gempir"
+
+## Main Menu
+[[menu.main]]
+    name = "Blog"
+    weight = 100
+    identifier = "blog"
+    url = "/blog"
+[[menu.main]]
+    name = "Imprint"
+    identifier = "imprint"
+    weight = 200
+    url = "/static/imprint"
