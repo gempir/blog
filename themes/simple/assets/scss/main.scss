@@ -1,10 +1,6 @@
 $flat-green: #27ae60;
 $flat-light-green: #2ecc71;
 
-html {
-    overflow-y: scroll;
-}
-
 body {
     margin: 0;
     font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
@@ -14,12 +10,6 @@ body {
 .content-wrapper {
     width: 1000px;
     margin: 0 auto;
-}
-
-@media only screen and (max-width: 1024px) {
-    .content-wrapper {
-        width: 95%;
-    }
 }
 
 .landing {
@@ -77,6 +67,10 @@ article {
 .article-meta {
     margin-top: 20px;
     color: rgba(0, 0, 0, 0.5);
+}
+
+.article-title {
+    margin-bottom: 0;
 }
 
 .recent-posts {
@@ -160,5 +154,20 @@ article {
                 }
             }
         }
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .content-wrapper {
+        width: 95%;
+    }
+
+    article {
+        font-size: 1rem;
+    }
+
+    .article-title {
+        font-size: 1.8rem;
     }
 }
