@@ -1,5 +1,7 @@
 $flat-green: #27ae60;
 $flat-light-green: #2ecc71;
+$grey: rgb(200, 200, 200);
+$light-grey: rgb(249, 249, 249);
 
 body {
     margin: 0;
@@ -45,6 +47,15 @@ article {
     font-size: 1.2rem;
     line-height: 1.8;
     color: rgba(0, 0, 0, 0.8);
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
 
     a {
         text-decoration: none;
@@ -56,20 +67,52 @@ article {
     }
 
     blockquote {
+        position: relative;
         color: rgba(0, 0, 0, 0.6);
 
         a {
             color: rgba(0, 0, 0, 0.6);
         }
+
+        &:before {
+            content: "“";
+            position: absolute;
+            top: 0;
+            left: -40px;
+        }
+
+        &:after {
+            content: "”";
+            position: absolute;
+            bottom: 0;
+            right: -40px;
+        }
+    }
+
+    code {
+        font-family: "Roboto Mono", monospace;
+        background: $light-grey;
+        border-radius: 5px;
+        border: 1px solid $grey;
+        padding: 3px;
     }
 }
 
 .article-meta {
     margin-top: 20px;
     color: rgba(0, 0, 0, 0.5);
+
+    span {
+        margin-right: 20px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
 }
 
 .article-title {
+    margin-top: 15px;
     margin-bottom: 0;
 }
 
@@ -156,7 +199,6 @@ article {
         }
     }
 }
-
 
 @media only screen and (max-width: 1024px) {
     .content-wrapper {

@@ -4,10 +4,14 @@
 
 {{ define "main" }}
 <div class="article-meta">
-    <i class="far fa-edit"></i>
-    {{ dateFormat "Jan 2, 2006" .PublishDate }}
-    <i class="far fa-clock clock"></i>
-    {{ .ReadingTime }} min read
+    <span>
+        <i class="far fa-edit"></i>
+        {{ dateFormat "Jan 2, 2006" .PublishDate }}
+    </span>
+    <span>
+        <i class="far fa-clock clock"></i>
+        {{ .ReadingTime }} min read
+    </span>
 </div>
 <h1 class="article-title">{{ .Title }}</h1>
 

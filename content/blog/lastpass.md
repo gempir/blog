@@ -8,9 +8,9 @@ As a small disclaimer: I am a PHP developer in my day job and I love PHP. This i
 
 I wanted to start using a password manager, since i’ve heard a lot about them and a lot of good things. The first one coming to my mind was LastPass because I have heard it somewhere on reddit or so before. After creating an account, I wanted to add 2-Factor-Authentication, because losing my LastPass account would equal losing every password of mine. I got redirected to [https://lastpass.com/update_phone.php](https://lastpass.com/update_phone.php)
 
-Red lights flashed in my head. I get redirected to a php file in the root of the webserver? The webserver doesn’t even bother rewriting the url so that maybe the url could look like “/update_phone”. Leaving out the .php will not work either.
+Red lights flashed in my head. I get redirected to a php file in the root of the webserver? The webserver doesn’t even bother rewriting the url so that maybe the url could look like `/update_phone`. Leaving out the .php will not work either.
 
-This is a big indicator for some really ugly and old PHP code. A friend of mine played around a bit after I joked require(‘header.php’); and found [https://lastpass.com/header.php](https://lastpass.com/header.php) which is literally the header of their main site.
+This is a big indicator for some really ugly and old PHP code. A friend of mine played around a bit after I joked `require(‘header.php’);` and found [https://lastpass.com/header.php](https://lastpass.com/header.php) which is literally the header of their main site.
 
 PHP can be a beautiful language in 2016, but sites like these give PHP such a bad reputation. How am I supposed to trust a site with all my passwords that writes code like this? These might not be big security issues on the first look, but I’m willing to bet that a company writing this kind of code, will have security issues somewhere.
 
