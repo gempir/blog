@@ -12,8 +12,9 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
 	 crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
 	
-	<link rel="stylesheet" href="https://gempir.com/scss/main.min.c2a1584bfc6f30ff4d8bc5bca74590e8ebb64e23d8e3bdb0d974f5dce0d26b73.css" integrity="sha256-wqFYS/xvMP9Ni8W8p0WQ6Ou2TiPY472w2XT13ODSa3M=" media="screen">
+	<link rel="stylesheet" href="https://gempir.com/scss/main.min.90bd7df51e7094edb170dccbef47875054970e717d0fa69056d8ca29ceb4a86a.css" integrity="sha256-kL199R5wlO2xcNzL70eHUFSXDnF9D6aQVtjKKc60qGo=" media="screen">
 </head><body>
 <nav class="navbar">
     <div class="navbar-inner content-wrapper">
@@ -37,10 +38,14 @@
 
         <div class="content-wrapper">
 <div class="article-meta">
-    <i class="far fa-edit"></i>
-    Nov 3, 2018
-    <i class="far fa-clock clock"></i>
-    3 min read
+    <span>
+        <i class="far fa-edit"></i>
+        Nov 3, 2018
+    </span>
+    <span>
+        <i class="far fa-clock clock"></i>
+        3 min read
+    </span>
 </div>
 <h1 class="article-title">Why you should think twice about using LastPass</h1>
 
@@ -54,9 +59,9 @@
 
 <p>I wanted to start using a password manager, since i’ve heard a lot about them and a lot of good things. The first one coming to my mind was LastPass because I have heard it somewhere on reddit or so before. After creating an account, I wanted to add 2-Factor-Authentication, because losing my LastPass account would equal losing every password of mine. I got redirected to <a href="https://lastpass.com/update_phone.php">https://lastpass.com/update_phone.php</a></p>
 
-<p>Red lights flashed in my head. I get redirected to a php file in the root of the webserver? The webserver doesn’t even bother rewriting the url so that maybe the url could look like “/update_phone”. Leaving out the .php will not work either.</p>
+<p>Red lights flashed in my head. I get redirected to a php file in the root of the webserver? The webserver doesn’t even bother rewriting the url so that maybe the url could look like <code>/update_phone</code>. Leaving out the .php will not work either.</p>
 
-<p>This is a big indicator for some really ugly and old PHP code. A friend of mine played around a bit after I joked require(‘header.php’); and found <a href="https://lastpass.com/header.php">https://lastpass.com/header.php</a> which is literally the header of their main site.</p>
+<p>This is a big indicator for some really ugly and old PHP code. A friend of mine played around a bit after I joked <code>require(‘header.php’);</code> and found <a href="https://lastpass.com/header.php">https://lastpass.com/header.php</a> which is literally the header of their main site.</p>
 
 <p>PHP can be a beautiful language in 2016, but sites like these give PHP such a bad reputation. How am I supposed to trust a site with all my passwords that writes code like this? These might not be big security issues on the first look, but I’m willing to bet that a company writing this kind of code, will have security issues somewhere.</p>
 
