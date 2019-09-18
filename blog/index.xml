@@ -1,25 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Blogs on Gempir</title>
-    <link>https://gempir.com/blog/</link>
-    <description>Recent content in Blogs on Gempir</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 03 Nov 2018 12:45:39 +0100</lastBuildDate>
-    
-	<atom:link href="https://gempir.com/blog/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Why you should think twice about using LastPass</title>
-      <link>https://gempir.com/blog/lastpass/</link>
-      <pubDate>Sat, 03 Nov 2018 12:45:39 +0100</pubDate>
-      
-      <guid>https://gempir.com/blog/lastpass/</guid>
-      <description>As a small disclaimer: I am a PHP developer in my day job and I love PHP. This is in no way a criticism of PHP.
-I wanted to start using a password manager, since i’ve heard a lot about them and a lot of good things. The first one coming to my mind was LastPass because I have heard it somewhere on reddit or so before. After creating an account, I wanted to add 2-Factor-Authentication, because losing my LastPass account would equal losing every password of mine.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blogs on Gempir</title><link>https://gempir.com/blog/</link><description>Recent content in Blogs on Gempir</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 03 Nov 2018 12:45:39 +0100</lastBuildDate><atom:link href="https://gempir.com/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Why you should think twice about using LastPass</title><link>https://gempir.com/blog/lastpass/</link><pubDate>Sat, 03 Nov 2018 12:45:39 +0100</pubDate><guid>https://gempir.com/blog/lastpass/</guid><description>As a small disclaimer: I am a PHP developer in my day job and I love PHP. This is in no way a criticism of PHP.
+I wanted to start using a password manager, since i’ve heard a lot about them and a lot of good things. The first one coming to my mind was LastPass because I have heard it somewhere on reddit or so before. After creating an account, I wanted to add 2-Factor-Authentication, because losing my LastPass account would equal losing every password of mine.</description></item></channel></rss>
