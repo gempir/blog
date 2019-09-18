@@ -6,9 +6,10 @@ on:
     - master
 
 jobs:
-	build:
-		runs-on: ubuntu-latest
-		steps:
-		- name: deploy
-		run: |
-			./deploy.sh
+    deploy:
+        name: deploy to gh-pages
+        runs-on: ubuntu-latest
+        steps:
+        - name: deploy
+          run: |
+              ./deploy.sh
