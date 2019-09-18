@@ -10,7 +10,7 @@ jobs:
         name: deploy to gh-pages
         runs-on: ubuntu-latest
         steps:
-        - uses: master
+        - uses: gempir/blog@master
         - name: deploy
           run: |
               ./deploy.sh
