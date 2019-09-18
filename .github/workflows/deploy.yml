@@ -1,0 +1,13 @@
+name: Blog Deploy
+
+on: [push]
+
+jobs:
+	build:
+
+	runs-on: ubuntu-latest
+
+	steps:
+	- name: deploy
+	run: |
+		./deploy.sh
