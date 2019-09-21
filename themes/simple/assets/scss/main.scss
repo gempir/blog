@@ -1,27 +1,42 @@
-$colorHighlight: #27ae60;
-$colorHighlightHover: #2ecc71;
-$colorText: rgb(10, 10, 10);
-$colorBackground: white;
-$colorLightBackground: rgb(200, 200, 200);
-
-@import "mixins";
-
-@include darkMode {
-    $colorHighlight: #27ae60 !global;
-    $colorHighlightHover: #2ecc71 !global;
-    $colorText: rgb(249, 249, 249) !global;
-    $colorBackground: #303030 !global;
-    $colorLightBackground: #697174 !global;
+:root {
+    --colorHighlight: #27ae60;
+    --colorHighlightHover: #2ecc71;
+    --colorText: rgb(10, 10, 10);
+    --colorBorder: rgba(10, 10, 10, 0.1);
+    --colorLightText: rgb(10, 10, 10, 0.6);
+    --colorBackground: white;
+    --colorLightBackground: rgb(200, 200, 200);
 }
 
+:root[data-theme="dark"] {
+    --colorHighlight: #27ae60;
+    --colorHighlightHover: #2ecc71;
+    --colorText: rgb(245, 245, 245);
+    --colorLightText: rgb(245, 245, 245, 0.6);
+    --colorBorder: rgba(245, 245, 245, 0.1);
+    --colorBackground: #303030;
+    --colorLightBackground: #697174;
+}
+
+@import "mixins";
 @import "navbar";
+@import "theme";
 
 body {
     margin: 0;
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Helvetica", Arial,
-        sans-serif;
-    background-color: $colorBackground;
-    color: $colorText;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    background-color: var(--colorBackground);
+    color: var(--colorText);
+    transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+}
+
+a {
+    text-decoration: none;
+    color: var(--colorHighlight);
+
+    &:hover {
+        color: var(--colorHighlightHover);
+    }
 }
 
 .content-wrapper {
@@ -42,17 +57,17 @@ body {
     }
 
     a {
-        color: rgba($colorText, 0.5);
+        color: var(--colorLightText);
         transition: color ease-in-out 0.1s;
 
         &:hover {
-            color: rgba($colorText, 0.8);
+            color: var(--colorText);
         }
     }
 
     h3 {
         font-size: 1.5rem;
-        color: rgba($colorText, 0.6);
+        color: var(--colorLightText);
     }
 }
 
@@ -71,15 +86,6 @@ article {
     -webkit-hyphens: auto;
     hyphens: auto;
 
-    a {
-        text-decoration: none;
-        color: $colorHighlight;
-
-        &:hover {
-            color: $colorHighlightHover;
-        }
-    }
-
     img {
         display: block;
         margin: 40px auto;
@@ -89,10 +95,10 @@ article {
 
     blockquote {
         position: relative;
-        color: rgba($colorText, 0.6);
+        color: var(--colorLightText);
 
         a {
-            color: rgba($colorText, 0.6);
+            color: var(--colorLightText);
         }
 
         &:before {
@@ -112,16 +118,16 @@ article {
 
     code {
         font-family: "Roboto Mono", monospace;
-        background: $colorLightBackground;
+        background: var(--colorLightBackground);
         border-radius: 5px;
-        border: 1px solid $colorLightBackground;
+        border: 1px solid var(--colorLightBackground);
         padding: 3px;
     }
 }
 
 .article-meta {
     margin-top: 20px;
-    color: rgba($colorText, 0.5);
+    color: var(--colorLightText);
 
     span {
         margin-right: 20px;
@@ -140,6 +146,7 @@ article {
 .recent-posts {
     a {
         text-decoration: none;
+        color: var(--colorText);
     }
 
     .post {
@@ -155,36 +162,19 @@ article {
         }
 
         &:hover {
-            border: 1px solid rgba($colorText, 0.1);
-
-            h3 {
-                color: rgba($colorText, 1);
-            }
+            border: 1px solid var(--colorBorder);
         }
 
         h3 {
             margin-top: 0;
             margin-bottom: 10px;
-            color: rgba($colorText, .8);
             font-size: 2rem;
         }
 
-        .post-summary {
-            color: rgba($colorText, 0.8);
-        }
-
-        .post-date {
-            color: rgba($colorText, 0.5);
-            float: left;
-        }
-
-        .reading-time {
-            color: rgba($colorText, 0.5);
-            float: right;
-        }
-
-        .clearfix {
-            clear: both;
+        .post-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--colorLightText);
         }
     }
 }

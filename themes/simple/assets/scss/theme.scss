@@ -1,0 +1,139 @@
+/////////////////////////////////////////////////
+// Mixins
+/////////////////////////////////////////////////
+@mixin crater($top, $left, $size) {
+    content: "";
+    position: absolute;
+    top: $top;
+    left: $left;
+    width: $size;
+    height: $size;
+    background-color: #efeeda;
+    border-radius: 100%;
+    border: 4px solid #dee1c5;
+}
+
+@mixin cloudBubble($top, $right, $width, $height, $deg) {
+    content: "";
+    display: block;
+    position: relative;
+    top: $top;
+    right: $right;
+    width: $width;
+    height: $height;
+    border: 8px solid #d4d4d2;
+    border-radius: 100%;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    transform: rotateZ($deg);
+    background-color: #fff;
+}
+
+/////////////////////////////////////////////////
+// Day State
+/////////////////////////////////////////////////
+.theme {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    margin-left: 15px;
+    padding: 4px;
+    border-radius: 20px;
+}
+
+.theme:before,
+.theme:after {
+    content: "";
+    display: table;
+}
+
+.theme:after {
+    clear: both;
+}
+
+.theme-bg {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 100%;
+    height: 100%;
+    background-color: #c0e6f6;
+    border-radius: 20px;
+    border: 2px solid #81c0d5;
+    transition: all 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.theme-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid red;
+    border-radius: 20px;
+    z-index: 2;
+    opacity: 0;
+}
+
+.theme-switch {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-left: 25px;
+    background-color: #f5eb42;
+    border: 2px solid #e4c74d;
+    border-radius: 50%;
+    transition: all 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.theme-switch-figure {
+    position: absolute;
+    bottom: -7x;
+    left: -25px;
+    display: block;
+    width: 40px;
+    height: 15px;
+    border: 4px solid #d4d4d2;
+    border-radius: 10px;
+    background-color: #fff;
+    transform: scale(0.4);
+    transition: all 0.12s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    &:after {
+        @include cloudBubble(-32px, -21px, 7px, 7px, 70deg);
+    }
+    &:before {
+        @include cloudBubble(-12px, -5px, 15px, 15px, 30deg);
+    }
+}
+
+.theme-switch-figureAlt {
+    @include crater(5px, 2px, 2px);
+
+    box-shadow: 21px -3px 0 -3px #fcfcfc, 37px -9px 0 -3px #fcfcfc, 27px 10px 0 -2px #fcfcfc, 38px 3px 0 -2px #fcfcfc;
+    transition: all 0.12s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: scale(0);
+}
+
+/////////////////////////////////////////////////
+// Night State
+/////////////////////////////////////////////////
+.theme-input:checked ~ .theme-switch {
+    margin-left: 0;
+    border-color: #dee1c5;
+    background-color: #fffdf2;
+}
+
+.theme-input:checked ~ .theme-bg {
+    background-color: var(--colorBackground);
+    border-color: #202020;
+}
+
+.theme-input:checked ~ .theme-switch .theme-switch-figure {
+    margin-left: 40px;
+    opacity: 0;
+    transform: scale(0.1);
+}
+
+.theme-input:checked ~ .theme-switch .theme-switch-figureAlt {
+    transform: scale(1);
+}

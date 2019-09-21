@@ -9,8 +9,9 @@
     </div> -->
     <h3>{{ .Title }}</h3>
     <p class="post-summary">{{ .Summary }}</p>
-    <span class="post-date">{{ dateFormat "Jan 2, 2006" .PublishDate }}</span>
-    <span class="reading-time">{{ .ReadingTime }} min read</span>
-    <div class="clearfix"></div>
+    <div class="post-meta">
+        <span class="post-date">{{ dateFormat "Jan 2, 2006" .PublishDate }}</span>
+        <span class="reading-time">{{ .ReadingTime }} min read</span>
+    </div>
 </a>
 <!-- end post -->

@@ -11,3 +11,9 @@
 </footer> -->
 <!-- End Footer
 ================================================== -->
+{{ $jsslice := resources.Get "js/main.js" | slice -}}
+{{ range .Site.Params.customJS -}}
+{{ $jsslice = $jsslice | append (resources.Get .) -}}
+{{ end -}}
+{{ $js := $jsslice | resources.Concat "js/bundle.js" | minify | fingerprint -}}
+<script src="{{ $js.Permalink }}" {{ printf "integrity=%q" $js.Data.Integrity | safeHTMLAttr }}></script>
