@@ -1,12 +1,27 @@
-$flat-green: #27ae60;
-$flat-light-green: #2ecc71;
-$grey: rgb(200, 200, 200);
-$light-grey: rgb(249, 249, 249);
+$colorHighlight: #27ae60;
+$colorHighlightHover: #2ecc71;
+$colorText: rgb(10, 10, 10);
+$colorBackground: white;
+$colorLightBackground: rgb(200, 200, 200);
+
+@import "mixins";
+
+@include darkMode {
+    $colorHighlight: #27ae60 !global;
+    $colorHighlightHover: #2ecc71 !global;
+    $colorText: rgb(249, 249, 249) !global;
+    $colorBackground: #303030 !global;
+    $colorLightBackground: #697174 !global;
+}
+
+@import "navbar";
 
 body {
     margin: 0;
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
-        Roboto, "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Helvetica", Arial,
+        sans-serif;
+    background-color: $colorBackground;
+    color: $colorText;
 }
 
 .content-wrapper {
@@ -27,17 +42,17 @@ body {
     }
 
     a {
-        color: rgba(0, 0, 0, 0.5);
+        color: rgba($colorText, 0.5);
         transition: color ease-in-out 0.1s;
 
         &:hover {
-            color: rgba(0, 0, 0, 0.8);
+            color: rgba($colorText, 0.8);
         }
     }
 
     h3 {
         font-size: 1.5rem;
-        color: rgba(0, 0, 0, 0.6);
+        color: rgba($colorText, 0.6);
     }
 }
 
@@ -46,7 +61,6 @@ article {
     font-family: Merriweather;
     font-size: 1.2rem;
     line-height: 1.8;
-    color: rgba(0, 0, 0, 0.8);
     overflow-wrap: break-word;
     word-wrap: break-word;
     -ms-word-break: break-all;
@@ -59,19 +73,26 @@ article {
 
     a {
         text-decoration: none;
-        color: $flat-green;
+        color: $colorHighlight;
 
         &:hover {
-            color: $flat-light-green;
+            color: $colorHighlightHover;
         }
+    }
+
+    img {
+        display: block;
+        margin: 40px auto;
+        max-width: 95%;
+        @include card(1);
     }
 
     blockquote {
         position: relative;
-        color: rgba(0, 0, 0, 0.6);
+        color: rgba($colorText, 0.6);
 
         a {
-            color: rgba(0, 0, 0, 0.6);
+            color: rgba($colorText, 0.6);
         }
 
         &:before {
@@ -91,16 +112,16 @@ article {
 
     code {
         font-family: "Roboto Mono", monospace;
-        background: $light-grey;
+        background: $colorLightBackground;
         border-radius: 5px;
-        border: 1px solid $grey;
+        border: 1px solid $colorLightBackground;
         padding: 3px;
     }
 }
 
 .article-meta {
     margin-top: 20px;
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba($colorText, 0.5);
 
     span {
         margin-right: 20px;
@@ -123,79 +144,47 @@ article {
 
     .post {
         display: block;
-        border: 1px solid rgba(0, 0, 0, 0.2);
+        border: 1px solid transparent;
         border-radius: 5px;
         padding: 20px;
         margin-bottom: 10px;
-        transition: border ease-in-out 0.1s;
+        transition: all ease-in-out 0.1s;
 
         &:last-child {
             margin-bottom: 0;
         }
 
         &:hover {
-            border: 1px solid rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba($colorText, 0.1);
+
+            h3 {
+                color: rgba($colorText, 1);
+            }
         }
 
         h3 {
             margin-top: 0;
             margin-bottom: 10px;
-            color: rgba(0, 0, 0, 0.8);
+            color: rgba($colorText, .8);
             font-size: 2rem;
         }
 
         .post-summary {
-            color: rgba(0, 0, 0, 0.8);
+            color: rgba($colorText, 0.8);
         }
 
         .post-date {
-            color: rgba(0, 0, 0, 0.5);
+            color: rgba($colorText, 0.5);
             float: left;
         }
 
         .reading-time {
-            color: rgba(0, 0, 0, 0.5);
+            color: rgba($colorText, 0.5);
             float: right;
         }
 
         .clearfix {
             clear: both;
-        }
-    }
-}
-
-.navbar {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.06);
-
-    .navbar-inner {
-        display: flex;
-        padding: 5px 0;
-        align-items: center;
-
-        .navbar-brand {
-            flex: 1 1 auto;
-            align-self: flex-start;
-
-            img {
-                height: 40px;
-                width: 40px;
-            }
-        }
-
-        .navbar-nav {
-            padding: 0;
-            margin: 0;
-            list-style-type: none;
-
-            li {
-                display: inline-block;
-                padding-left: 10px;
-
-                a {
-                    text-decoration: none;
-                    color: rgba(0, 0, 0, 0.8);
-                }
-            }
         }
     }
 }
