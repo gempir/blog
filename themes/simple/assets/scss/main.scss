@@ -5,7 +5,7 @@
     --colorBorder: rgba(10, 10, 10, 0.1);
     --colorLightText: rgb(10, 10, 10, 0.6);
     --colorBackground: white;
-    --colorLightBackground: rgb(200, 200, 200);
+    --colorLightBackground: rgb(235, 235, 235);
 }
 
 :root[data-theme="dark"] {
@@ -116,6 +116,7 @@ article {
     }
 
     code {
+        display: block;
         font-family: "Roboto Mono", monospace;
         background: var(--colorLightBackground);
         border-radius: 5px;

@@ -1,6 +1,6 @@
 ---
 title: "Why you should think twice about using LastPass"
-date: 2018-11-03T12:45:39+01:00
+date: 2018-11-03
 draft: false
 comments: true
 ---
