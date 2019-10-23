@@ -4,7 +4,7 @@ date: 2019-09-22
 draft: false
 comments: true
 ---
-A few years ago I was feeling creative and thought an IRC chat bot would be a great output for my creativity.
+A few years ago I was constantly looking for fun side projects. I hadn't found that one project that could entertain me for long though. Until I started to play with IRC on twitch.
 IRC itself wasn't really that common anymore, but an up and coming streaming site named twitch.tv was using IRC to run the chat used by thousands of viewers.
 I started writing on this bot with simple features like the current time or repeating what I would say if I issue the command to do so. 
 I quickly realized that this wasn't going anywhere since lots of big bots already supported most of the feature I offered on mine and a lot more including online dashboard etc.
@@ -15,8 +15,8 @@ For a streamers with just a few hundred viewers OverRustleLogs just wasn't avail
 
 ## The first bot
 
-So I thought maybe that's my chance, make my bot log the chat and impress the streamer, I was currently watching [twitch.tv/nmplol](https://twitch.tv/nmplol), hes a pretty funny dude check him out if you like.
-I had never hosted for a real audience before besides some tiny personal portfolios. Twitch is a big site and even smaller streamers still have hundreds of people in chat. 
+So I thought maybe that's my chance, make my bot log the chat and impress the streamer, I was watching [twitch.tv/nmplol](https://twitch.tv/nmplol), hes a pretty funny dude check him out if you like.
+I had never hosted for a real audience before besides some tiny personal portfolios. Twitch could expose my content to a lot of users very quickly, since when I link appears in chat many people might click it at once.
 Back then I thought hosting it myself would be annoying and too much data transferred per month. So I got the bright idea to use other sites for my logs. 
 I would still store the whole logs locally but upload them on demand to [pastebin](https://pastebin.com), I even got a pro account for that purpose and also asked pastebin support for better ratelimits and they happily said yes since I wasn't doing anything bad.
 
@@ -28,7 +28,7 @@ and you can tell by the commit count, I looked back a few years to find a point 
 Please excuse the language in the log, twitch chat can be a crazy place.
 At the same time I started adding features to gempbot like saving all Oddshot links to another log. Oddshots were basically the first type of clips. Oddshots made the whole clipping meta even possible thanks to an easy to use browser extension, but this blog post isn't about clips.
 
-The pastebin method was valid at the time because only a few people were requesting logs and I was only hosting it for 1 streamer basically.
+The pastebin method was enough at the time because only a few people were requesting logs and I was only hosting it for 1 streamer basically.
 
 ## Getting a server
 
