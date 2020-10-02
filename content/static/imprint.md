@@ -7,7 +7,6 @@ draft: false
 Owner
 =====
 
-Daniel Pasch-Sannapiu  
 gempir.dev@gmail.com
 
 Privacy Policy
