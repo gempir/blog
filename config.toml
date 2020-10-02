@@ -16,7 +16,7 @@ disqusShortname = "gempir-com"
 
 [params.index]
   picture = "/images/profile.png"
-  title = "Daniel Pasch"
+  title = "gempir"
   subtitle = "Software Developer"
 
 [params.social]
