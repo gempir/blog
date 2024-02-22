@@ -1,0 +1,3 @@
+media:
+  input: static/images
+  output: /images
