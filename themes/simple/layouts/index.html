@@ -33,6 +33,9 @@
         {{ with .Site.Params.social.twitter }}
         <a href="https://www.twitter.com/{{.}}" class="social-icon"><i class="fab fa-twitter" aria-hidden="true"></i></a>
         {{ end }}
+        {{ with .Site.Params.social.bluesky }}
+        <a href="https://bsky.app/profile/{{.}}" class="social-icon"><i class="fab fa-bluesky" aria-hidden="true"></i></a>
+        {{ end }}
     </section>
 </div>
 {{end}}
